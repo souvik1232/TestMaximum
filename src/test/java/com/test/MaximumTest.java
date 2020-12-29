@@ -84,7 +84,7 @@ public class MaximumTest {
         result = maximum.maxValue(arr);
         Assert.assertEquals("peach",result);
     }
-
+    //Generic TC
     @Test
     public void testGenericMax() {
         Integer arr[] = {1,2,3};
