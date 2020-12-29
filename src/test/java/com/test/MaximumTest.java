@@ -6,7 +6,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MaximumTest {
-    @Test
+    //UC1
+    @Test//TC1
     public void testIntegerMaximum1() {
         int arr[] = {1,2,3};
         int result = 0;
@@ -15,7 +16,7 @@ public class MaximumTest {
         Assert.assertEquals(3,result);
     }
 
-    @Test
+    @Test//TC2
     public void testIntegerMaximum2() {
         int arr[] = {1,3,2};
         int result = 0;
@@ -23,7 +24,7 @@ public class MaximumTest {
         result = maximum.maxInteger(arr);
         Assert.assertEquals(3,result);
     }
-    @Test
+    @Test//TC3
     public void testIntegerMaximum3() {
         int arr[] = {3,1,2};
         int result = 0;
