@@ -32,4 +32,30 @@ public class MaximumTest {
         result = maximum.maxInteger(arr);
         Assert.assertEquals(3,result);
     }
+
+    //UC2
+    @Test//TC1
+    public void testFloatMaximum1() {
+        float arr[] = {1.0F, 2.0F, 3.0F};
+        float result = 0.0F;
+        Maximum maximum = new Maximum();
+        result = maximum.maxFloat(arr);
+        Assert.assertEquals(3.0F,result,0);
+    }
+    @Test//TC2
+    public void testFloatMaximum2() {
+        float arr[] = {1.0F, 3.0F, 2.0F};
+        float result = 0.0F;
+        Maximum maximum = new Maximum();
+        result = maximum.maxFloat(arr);
+        Assert.assertEquals(3.0F,result,0);
+    }
+    @Test//TC3
+    public void testFloatMaximum3() {
+        float arr[] = {3.0F, 2.0F, 1.0F};
+        float result = 0.0F;
+        Maximum maximum = new Maximum();
+        result = maximum.maxFloat(arr);
+        Assert.assertEquals(3.0F,result,0);
+    }
 }
