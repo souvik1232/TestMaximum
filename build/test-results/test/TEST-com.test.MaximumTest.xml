@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.test.MaximumTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-12-29T04:31:42" hostname="MSI" time="0.006">
+<testsuite name="com.test.MaximumTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-12-29T05:27:19" hostname="MSI" time="0.003">
   <properties/>
-  <testcase name="testFloatMaximum1" classname="com.test.MaximumTest" time="0.002"/>
+  <testcase name="testFloatMaximum1" classname="com.test.MaximumTest" time="0.001"/>
   <testcase name="testFloatMaximum2" classname="com.test.MaximumTest" time="0.0"/>
   <testcase name="testFloatMaximum3" classname="com.test.MaximumTest" time="0.0"/>
   <testcase name="testIntegerMaximum1" classname="com.test.MaximumTest" time="0.0"/>
