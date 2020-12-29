@@ -28,4 +28,18 @@ public class Maximum {
         }
         return array[0];
     }
+
+    public static String maxString(String [] array) {
+        String temp = null;
+        for (int i =0 ; i< array.length;i++){
+            for (int j = 1; j< array.length;j++){
+                if(array[j-1].length() < array[j].length()){
+                    temp = array[j-1];
+                    array[j-1] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array[0];
+    }
 }

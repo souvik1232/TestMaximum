@@ -58,4 +58,30 @@ public class MaximumTest {
         result = maximum.maxFloat(arr);
         Assert.assertEquals(3.0F,result,0);
     }
+
+    //UC3
+    @Test//TC1
+    public void testStringMaximum1() {
+        String arr[] = {"apple","banana","peach"};
+        String result = null;
+        Maximum maximum = new Maximum();
+        result = maximum.maxString(arr);
+        Assert.assertEquals("banana",result);
+    }
+    @Test//TC2
+    public void testStringMaximum2() {
+        String arr[] = {"banana","apple","peach"};
+        String result = null;
+        Maximum maximum = new Maximum();
+        result = maximum.maxString(arr);
+        Assert.assertEquals("banana",result);
+    }
+    @Test//TC3
+    public void testStringMaximum3() {
+        String arr[] = {"apple","peach","banana"};
+        String result = null;
+        Maximum maximum = new Maximum();
+        result = maximum.maxString(arr);
+        Assert.assertEquals("banana",result);
+    }
 }
