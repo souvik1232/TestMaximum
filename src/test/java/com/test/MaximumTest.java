@@ -11,7 +11,7 @@ public class MaximumTest {
     public void testIntegerMaximum1() {
         Integer arr[] = {1,2,3};
         int result = 0;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         Assert.assertEquals(result,3);
     }
@@ -20,7 +20,7 @@ public class MaximumTest {
     public void testIntegerMaximum2() {
         Integer arr[] = {1,3,2};
         int result = 0;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         assertEquals(3,result);
     }
@@ -28,9 +28,8 @@ public class MaximumTest {
     public void testIntegerMaximum3() {
         Integer arr[] = {3,1,2};
         int result = 0;
-        Maximum maximum = new Maximum();
-        result = maximum.maxValue(
-                arr);
+        Maximum maximum = new Maximum(arr);
+        result = maximum.maxValue(arr);
         Assert.assertEquals(3,result);
     }
 
@@ -39,7 +38,7 @@ public class MaximumTest {
     public void testFloatMaximum1() {
         Float arr[] = {1.0F, 2.0F, 3.0F};
         float result = 0.0F;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         Assert.assertEquals(3.0F,result,0);
     }
@@ -47,7 +46,7 @@ public class MaximumTest {
     public void testFloatMaximum2() {
         Float arr[] = {1.0F, 3.0F, 2.0F};
         float result = 0.0F;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         Assert.assertEquals(3.0F,result,0);
     }
@@ -55,7 +54,7 @@ public class MaximumTest {
     public void testFloatMaximum3() {
         Float arr[] = {3.0F, 2.0F, 1.0F};
         float result = 0.0F;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         Assert.assertEquals(3.0F,result,0);
     }
@@ -65,7 +64,7 @@ public class MaximumTest {
     public void testStringMaximum1() {
         String arr[] = {"apple","banana","peach"};
         String result = null;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         Assert.assertEquals("peach",result);
     }
@@ -73,7 +72,7 @@ public class MaximumTest {
     public void testStringMaximum2() {
         String arr[] = {"banana","apple","peach"};
         String result = null;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         Assert.assertEquals("peach",result);
     }
@@ -81,8 +80,15 @@ public class MaximumTest {
     public void testStringMaximum3() {
         String arr[] = {"apple","peach","banana"};
         String result = null;
-        Maximum maximum = new Maximum();
+        Maximum maximum = new Maximum(arr);
         result = maximum.maxValue(arr);
         Assert.assertEquals("peach",result);
+    }
+
+    @Test
+    public void testGenericMax() {
+        Integer arr[] = {1,2,3};
+        Maximum maximum = new Maximum(arr);
+        Assert.assertEquals(maximum.maxValue(),3);
     }
 }
